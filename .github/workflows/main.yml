@@ -1,0 +1,12 @@
+name: Basic Check
+on:
+pull_request:
+types: [opened, synchronize]
+jobs:
+check:
+runs-on: ubuntu-latest
+steps:
+- name: Checkout repository
+uses: actions/checkout@v3
+- name: Run a simple check
+run: echo "Pull Request opened!"
